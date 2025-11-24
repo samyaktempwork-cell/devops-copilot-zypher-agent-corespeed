@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI DevOps Copilot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-light">
+  <div class="app-container">
+    <header class="app-header">
+      <h1>AI DevOps Copilot</h1>
+      <div class="header-right">
+        <span id="active-mode-label">Mode: Chat</span>
+        <button id="theme-toggle">🌙 Dark</button>
+      </div>
+    </header>
+
+    <div class="app-main">
+      <!-- Sidebar / Actions Panel -->
+      <aside class="sidebar">
+        <h2>Tools</h2>
+        <button class="tool-btn" data-mode="chat">💬 Chat</button>
+        <button class="tool-btn" data-mode="analyze-logs">📄 Analyze Logs</button>
+        <button class="tool-btn" data-mode="suggest-fixes">🛠 Suggest Fixes</button>
+        <button class="tool-btn" data-mode="k8s-yaml">📦 K8s YAML</button>
+        <button class="tool-btn" data-mode="tf-validate">🧱 Validate Terraform</button>
+        <button class="tool-btn" data-mode="shell-sim">🖥 Shell (Simulated)</button>
+      </aside>
+
+      <!-- Chat + Input Panel -->
+      <section class="center-panel">
+        <h2>Prompt & Input</h2>
+        <div class="input-group">
+          <label for="prompt-input">Prompt</label>
+          <textarea id="prompt-input" placeholder="Describe your DevOps issue or request..."></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="file-input">Attach file (logs, YAML, .tf) – optional</label>
+          <input type="file" id="file-input" />
+        </div>
+
+        <div class="actions-row">
+          <button id="run-btn">Run Tool</button>
+          <button id="clear-btn" class="secondary">Clear</button>
+        </div>
+      </section>
+
+      <!-- Output / Result Panel -->
+      <section class="output-panel">
+        <h2>Output</h2>
+        <pre id="output-viewer">(Results will appear here)</pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

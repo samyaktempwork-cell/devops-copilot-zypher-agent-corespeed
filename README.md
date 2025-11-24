@@ -6,7 +6,7 @@ A modern DevOps assistant powered by **Zypher + OpenAI**, designed to analyze lo
 ---
 
 ##  Features (Current Version)
-
+![CLI Screenshot](./V1-Dashboard.png)
 ###  Professional DevOps Dashboard (C3 Layout)
 - Sidebar with tools  
 - Chat + file upload panel  
