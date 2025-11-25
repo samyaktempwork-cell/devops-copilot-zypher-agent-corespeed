@@ -1,5 +1,3 @@
-// ui/app.js
-
 let currentMode = "chat";
 
 const modeLabel = document.getElementById("active-mode-label");
@@ -11,7 +9,6 @@ const runBtn = document.getElementById("run-btn");
 const clearBtn = document.getElementById("clear-btn");
 const outputViewer = document.getElementById("output-viewer");
 
-// Handle tool selection
 toolButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     toolButtons.forEach(b => b.classList.remove("active"));
@@ -22,7 +19,6 @@ toolButtons.forEach((btn) => {
   });
 });
 
-// Theme toggle
 themeToggleBtn.addEventListener("click", () => {
   const body = document.body;
   const isDark = body.classList.contains("theme-dark");
@@ -38,14 +34,12 @@ themeToggleBtn.addEventListener("click", () => {
   }
 });
 
-// Clear button
 clearBtn.addEventListener("click", () => {
   promptInput.value = "";
   fileInput.value = "";
   outputViewer.textContent = "(Results will appear here)";
 });
 
-// Run button – calls backend (placeholder endpoints for now)
 runBtn.addEventListener("click", async () => {
   const prompt = promptInput.value.trim();
   if (!prompt && !fileInput.files.length) {
@@ -88,7 +82,7 @@ runBtn.addEventListener("click", async () => {
       body: formData,
     });
 
-    const data = await res.json().catch(() => null);
+    const data = await res.json().catch(() => ({}));
 
     if (data && data.result) {
       outputViewer.textContent = data.result;

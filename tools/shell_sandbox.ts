@@ -1,5 +1,3 @@
-// tools/shell_sandbox.ts
-
 export function ShellSandboxTool() {
   return {
     name: "shell_sandbox",

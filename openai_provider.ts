@@ -1,4 +1,4 @@
-// openai_provider.ts
+
 import { Observable } from "npm:rxjs";
 
 export class OpenAIProvider {
@@ -10,7 +10,7 @@ export class OpenAIProvider {
     this.model = model;
   }
 
-  // MUST RETURN OBSERVABLE WITH CORRECT EVENT SHAPE
+
   streamChat(messages: { role: string; content: string }[]) {
     return new Observable((subscriber) => {
 
@@ -30,7 +30,6 @@ export class OpenAIProvider {
         .then(data => {
           const text = data.choices?.[0]?.message?.content ?? "";
 
-          // ⭐ MUST MATCH ZYPHER'S EVENT INTERFACE
           subscriber.next({
             type: "text",
             content: text

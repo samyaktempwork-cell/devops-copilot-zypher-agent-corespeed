@@ -1,5 +1,3 @@
-// tools/log_analyzer.ts
-
 export function LogAnalyzerTool() {
   return {
     name: "log_analyzer",

@@ -1,5 +1,3 @@
-// tools/tf_validator.ts
-
 export function TerraformValidatorTool() {
   return {
     name: "tf_validator",

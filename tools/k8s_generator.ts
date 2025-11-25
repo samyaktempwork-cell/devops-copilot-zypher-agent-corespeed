@@ -1,5 +1,3 @@
-// tools/k8s_generator.ts
-
 export function K8sGeneratorTool() {
   return {
     name: "k8s_generator",
