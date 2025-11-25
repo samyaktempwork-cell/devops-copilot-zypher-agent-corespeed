@@ -1,5 +1,3 @@
-// cli/main.ts
-
 import { DevOpsAgent } from "../agents/devops_agent.ts";
 
 const prompt = Deno.args.join(" ").trim();
