@@ -1,0 +1,8 @@
+# Windows setup scripts
+setup-devops-copilot.ps1
+fix_and_run.bat
+
+# Any other local env files
+*.env
+.env.local
+.env.*.local
